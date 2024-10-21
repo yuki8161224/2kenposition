@@ -2,7 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    height: 5000px;
+    height: 7000px;
     overflow-x: hidden;
     background-color: black;
 }
@@ -23,6 +23,19 @@ main {
     /*align-items: center;*/
     gap: 30px;
     /* Space between images, optional */
+}
+
+
+section {
+    overflow-x: hidden;
+    font-family: serif;
+
+}
+
+.container {
+    overflow: auto;
+    scroll-snap-type: y;
+    height: 100vh;
 }
 
 .square-box {
@@ -51,5 +64,113 @@ main {
         /* 不透明 */
     }
 
+
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 700px;
+    transition: background 0.5s ease, opacity 0.5s ease;
+    /* backgroundのトランジションを追加 */
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 999;
+}
+
+
+.image-container {
+    position: relative;
+    height: 7000px;
+    padding-top: 100px;
+    background-size: cover;
+    background-position: right;
+}
+
+
+.horizontal-image-1 {
+    width: 120%;
+    padding-top: 100px;
+    transition: opacity 0.5s ease;
+    position: block;
+}
+
+.horizontal-image-2 {
+    width: 120%;
+    transition: opacity 0.5s ease;
+    transition: scrollPositionX 1s ease;
+    position: block;
+}
+
+main img {
+    display: block;
+    position: relative;
+}
+
+.parent {
+    display: flex;
+    justify-content: left;
+    transition: transform 1s ease;
+}
+
+.parent-reverse {
+    display: flex;
+    justify-content: right;
+    transition: transform 1s ease;
+}
+
+.parent2 {
+    display: flex;
+    justify-content: right;
+    transition: transform 1s ease;
+}
+
+.parent-reverse2 {
+    display: flex;
+    justify-content: left;
+    transition: transform 1s ease;
+}
+
+.animate-x {
+    animation: moveX 2s forwards ease-in-out;
+}
+
+.animate-x-reverse {
+    animation: moveXReverse 2s forwards ease-in-out;
+}
+
+@keyframes moveX {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateX(-500px);
+        /* Move 500px to the right */
+    }
+}
+
+@keyframes moveXReverse {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateX(500px);
+        /* Move 500px to the left */
+    }
+}
+
+
+
+.original-gradient {
+    display: flex;
+    width: 100%;
+    height: 100%;
 
 }
