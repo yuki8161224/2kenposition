@@ -93,6 +93,8 @@ section {
 }
 
 
+
+
 .image-container {
     position: relative;
     height: 7000px;
@@ -115,12 +117,15 @@ section {
     position: block;
 }
 
+
+
 main img {
     display: block;
     position: relative;
 }
 
 .under-img {
+
     z-index: 994;
 }
 
@@ -139,7 +144,7 @@ main img {
 
 .parent-reverse {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     transition: transform 1s ease;
 }
 
@@ -186,7 +191,7 @@ main img {
 .clip {
     position: absolute;
     /* 画面全体に固定表示 */
-    top: 30%;
+    top: 0%;
     /* 上からの位置 */
     left: 0;
     /* 左からの位置 */
@@ -200,26 +205,18 @@ main img {
     /* フレックスボックスを使う */
     align-items: center;
     /* 縦中央揃え */
-    justify-content: center;
-    /* 横中央揃え */
-    /* クリップされる要素がはみ出ないように */
+
 }
 
 .image-container-1 {
-    top: 80%;
-    /* 通常の位置 */
-    /* 通常の位置 */
-    width: 100%;
-    /* 幅を100%に */
-    height: auto;
-    /* 高さは自動 */
-    width: max-content;
+    position: absolute;
+
 }
 
 .image-container-1 img {
     width: 100%;
     /* 画像の幅を100%に */
-    height: auto;
+    height: 100%;
     /* アスペクト比を保つ */
 }
 
