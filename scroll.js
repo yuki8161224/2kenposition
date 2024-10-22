@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Trigger animations for next 3 rows at 1180px scroll (500 + 680)
-    if (scrollY >= 1180) {
+    if (scrollY >= 1900) {
         parentElementFourth.classList.add('animate-x-reverse'); // Fourth row moves to the left
         parentElementFifth.classList.add('animate-x'); // Fifth row moves to the right
         parentElementSixth.classList.add('animate-x-reverse'); // Sixth row moves to the left
@@ -47,7 +47,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Trigger animations for next 3 rows at 1860px scroll (1180 + 680)
-    if (scrollY >= 1860) {
+    if (scrollY >= 2900) {
         parentElementSeventh.classList.add('animate-x'); // Seventh row moves to the right
         parentElementEighth.classList.add('animate-x-reverse'); // Eighth row moves to the left
         parentElementNinth.classList.add('animate-x'); // Ninth row moves to the right
@@ -57,7 +57,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Trigger animations for the last 3 rows at 2540px scroll (1860 + 680)
-    if (scrollY >= 2540) {
+    if (scrollY >= 4250) {
         parentElementTenth.classList.add('animate-x-reverse'); // Tenth row moves to the left
         parentElementEleventh.classList.add('animate-x'); // Eleventh row moves to the right
         parentElementTwelfth.classList.add('animate-x-reverse'); // Twelfth row moves to the left

@@ -33,23 +33,7 @@ $(function () {
         });
     }
 
-    // 左側にボタンを作成してセクションに移動する
-    function createLeftButtons() {
-        var buttons = "<div class=\"left-buttons\" style=\"position: fixed; left: 10px; top: 50%; transform: translateY(-50%);\">";
-        $(".box").each(function (i) {
-            var sectionName = $(this).attr("data-section-name");
-            buttons += "<button style=\"display: block; margin: 10px 0; padding: 10px 20px;\" data-section=\"" + sectionName + "\">" + sectionName.charAt(0).toUpperCase() + sectionName.slice(1) + "</button>";
-        });
-        buttons += "</div>";
 
-        $("body").append(buttons);
-
-        // 各ボタンにクリックイベントを追加してセクションに移動
-        $(".left-buttons button").on("click", function () {
-            var section = $(this).attr("data-section");
-            $.scrollify.move("#" + section);
-        });
-    }
 
     // 初回読み込み時にScrollifyを初期化し、左ボタンを作成
     initializeScrollify();
@@ -61,3 +45,4 @@ $(function () {
         initializeScrollify(); // 新しい設定で再初期化
     });
 });
+
