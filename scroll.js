@@ -27,7 +27,7 @@ window.addEventListener('scroll', function () {
     const underparentElementTwelfth = document.getElementById('underparentElementTwelfth'); // Twelfth row
 
     // Trigger animations for first 3 rows at 500px scroll
-    if (scrollY >= 500) {
+    if (scrollY >= 50) {
         parentElement.classList.add('animate-x'); // First row moves to the right
         parentElementReverse.classList.add('animate-x-reverse'); // Second row moves to the left
         parentElementThird.classList.add('animate-x'); // Third row moves to the right
@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Trigger animations for next 3 rows at 1180px scroll (500 + 680)
-    if (scrollY >= 1900) {
+    if (scrollY >= 1000) {
         parentElementFourth.classList.add('animate-x-reverse'); // Fourth row moves to the left
         parentElementFifth.classList.add('animate-x'); // Fifth row moves to the right
         parentElementSixth.classList.add('animate-x-reverse'); // Sixth row moves to the left
@@ -67,7 +67,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Remove animations if scrolling back below 500px
-    if (scrollY < 500) {
+    if (scrollY < 50) {
         parentElement.classList.remove('animate-x');
         parentElementReverse.classList.remove('animate-x-reverse');
         parentElementThird.classList.remove('animate-x');
@@ -77,7 +77,7 @@ window.addEventListener('scroll', function () {
     }
 
     // Remove animations if scrolling back below 1180px
-    if (scrollY < 1180) {
+    if (scrollY < 1000) {
         parentElementFourth.classList.remove('animate-x-reverse');
         parentElementFifth.classList.remove('animate-x');
         parentElementSixth.classList.remove('animate-x-reverse');
