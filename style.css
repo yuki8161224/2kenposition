@@ -95,23 +95,42 @@ section {
 
 
 
+
+
 .image-container {
     position: relative;
     height: 7000px;
-    padding-top: 100px;
+    /*padding-top: 100vh;*/
     background-size: cover;
     background-position: right;
 }
 
 .horizontal-image-1 {
     width: 120%;
-    padding-top: 100px;
+    /*padding-top: 21.9%;
+     デフォルト */
     transition: opacity 0.5s ease;
     position: block;
 }
 
+/* 画面が768px以下のとき（タブレットやスマホ） 
+@media (max-width: 1024px) {
+    .horizontal-image-1 {
+        padding-top: 0%;
+        /* 小さい画面では余白を大きくする
+    }
+}
+
+/* 画面が1200px以上のとき（デスクトップ）
+@media (min-width: 1200px) {
+    .horizontal-image-1 {
+        padding-top: 21.9%;
+        /* 大きい画面では余白を減らす
+    }
+}*/
+
 .horizontal-image-2 {
-    width: 120%;
+    width: 120vw;
     transition: opacity 0.5s ease;
     transition: scrollPositionX 1s ease;
     position: block;
@@ -129,6 +148,12 @@ main img {
     z-index: 994;
 }
 
+.top-img {
+    position: block;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
 .parent {
     display: flex;
     justify-content: left;
@@ -144,7 +169,7 @@ main img {
 
 .parent-reverse {
     display: flex;
-    justify-content: left;
+    justify-content: right;
     transition: transform 1s ease;
 }
 
@@ -190,26 +215,19 @@ main img {
 
 .clip {
     position: absolute;
-    /* 画面全体に固定表示 */
-    top: 0%;
-    /* 上からの位置 */
-    left: 0;
-    /* 左からの位置 */
-    width: 100%;
-    /* 幅を100%に */
-    height: 100%;
-    /* 高さを100%に */
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
     z-index: 998;
-    /* 前面に表示 */
     display: flex;
-    /* フレックスボックスを使う */
-    align-items: center;
-    /* 縦中央揃え */
-
+    align-items: flex-start;
+    /* 変更: 要素を上部に配置 */
 }
 
 .image-container-1 {
     position: absolute;
+
 
 }
 
