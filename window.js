@@ -1,6 +1,6 @@
 // clip要素の取得
 const clipElement = document.querySelector('.clip');
-const imageContainer = document.querySelector('.image-container-1');
+const imageContainer = document.querySelector('.image-container-2');
 
 // クリップマスクの初期設定
 const maskSize = 20; // クリップマスクのサイズ（%）
@@ -18,3 +18,15 @@ window.addEventListener('scroll', () => {
     // clipPathを更新
     clipElement.style.clipPath = `circle(${maskSize}% at ${clipX}% ${centerY + scrollY}px)`; // Y座標をスクロールに連動
 });
+
+
+document.getElementById('startButton').addEventListener('click', function () {
+    const startScreen = document.getElementById('startScreen');
+    startScreen.style.opacity = '0';
+
+    // フェードアウト後に非表示にする
+    setTimeout(() => {
+        startScreen.style.display = 'none';
+    }, 2000); // CSSのtransitionと同じ2秒後に非表示に
+});
+

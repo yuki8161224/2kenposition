@@ -7,18 +7,20 @@
     <title>テスト</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/6-1.css">
+    <link rel="stylesheet" href="start.css">
 </head>
 
 <body>
-    <header class="header">
-        <!-- ヘッダーの内容 -->
-    </header>
+
+    <div class="start-screen" id="startScreen">
+        <div class="square-box">
+            <img src="posipic.png" alt="Start Image">
+        </div>
+        <button class="start-button" id="startButton">start</button>
+    </div>
+
     <main>
-        <section>
-            <div class="square-box">
-                <img src="posipic.png" alt="画像">
-            </div>
-        </section>
+
         <div class="maincontent">
             <div class="clip">
                 <div class="top-img">
@@ -26,7 +28,7 @@
                         <div class="parent" id="parentElement">
                             <img src="posipic.png" class="horizontal-image-1">
                             <img src="posipic.png" class="horizontal-image-1">
-                            <img src="posipic.png" class="horizontal-image-1s">
+                            <img src="posipic.png" class="horizontal-image-1">
                         </div>
 
                         <div class="parent-reverse" id="parentElementReverse">
@@ -97,7 +99,9 @@
                     </div>
                 </div>
             </div>
-            <div class="overlay" id="overlay"></div>
+
+            <div class="overlay" id="overlay">
+            </div>
             <div class="under-img">
                 <div class="image-container-1">
                     <div class="parent" id="underparentElement">
