@@ -77,17 +77,17 @@ section {
 
 @keyframes colorChange {
     0% {
-        background-color: rgba(255, 0, 0, 0.376);
+        background-color: rgba(255, 0, 0, 0.5);
         /* Red */
     }
 
     50% {
-        background-color: rgba(0, 0, 255, 0.376);
+        background-color: rgba(0, 0, 255, 0.5);
         /* Blue */
     }
 
     100% {
-        background-color: rgba(255, 0, 0, 0.376);
+        background-color: rgba(255, 0, 0, 0.5);
         /* Red */
     }
 }
@@ -227,6 +227,14 @@ main img {
 
 .image-container-1 {
     position: absolute;
+    width: 100%;
+    height: auto;
+    /* 画面の高さ全体にフィット */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* コンテナをオーバーフローさせない */
+    /* z-indexの競合を避ける */
 
 
 }
@@ -234,8 +242,11 @@ main img {
 .image-container-1 img {
     width: 100%;
     /* 画像の幅を100%に */
-    height: 100%;
+    height: 100vh;
     /* アスペクト比を保つ */
+    object-fit: cover;
+    /* コンテナに合わせて画像をカバー */
+    transition: opacity 0.5s ease;
 }
 
 

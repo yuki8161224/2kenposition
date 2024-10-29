@@ -3,7 +3,7 @@ const clipElement = document.querySelector('.clip');
 const imageContainer = document.querySelector('.image-container-2');
 
 // クリップマスクの初期設定
-const maskSize = 20; // クリップマスクのサイズ（%）
+const maskSize = 30; // クリップマスクのサイズ（%）
 const clipX = 80; // X座標を右から20%の位置に固定
 
 // スクロールイベントのリスナー
