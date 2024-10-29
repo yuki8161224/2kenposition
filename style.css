@@ -72,24 +72,28 @@ section {
     height: 100%;
     padding-top: 700px;
     z-index: 995;
-    animation: colorChange 3s infinite;
+    transition: background-color 1s ease;
+    /* Smooth transition */
 }
 
-@keyframes colorChange {
-    0% {
-        background-color: rgba(255, 0, 0, 0.5);
-        /* Red */
-    }
+.bg-yellow {
+    background-color: rgba(255, 255, 0, 0.5);
+    /* Yellow */
+}
 
-    50% {
-        background-color: rgba(0, 0, 255, 0.5);
-        /* Blue */
-    }
+.bg-indigo {
+    background-color: rgba(75, 0, 130, 0.5);
+    /* Indigo */
+}
 
-    100% {
-        background-color: rgba(255, 0, 0, 0.5);
-        /* Red */
-    }
+.bg-red {
+    background-color: rgba(255, 0, 0, 0.5);
+    /* Red */
+}
+
+.bg-white {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* White */
 }
 
 
