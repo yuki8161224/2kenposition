@@ -25,10 +25,7 @@ main {
     /* Space between images, optional */
 }
 
-section {
-    overflow-x: hidden;
-    font-family: serif;
-}
+
 
 .container {
     overflow: auto;
@@ -240,5 +237,90 @@ main img {
 }
 
 
+.section {
+    width: 100%;
+    height: 25vh;
+    /* 25% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
 
-/* その他のスタイルは必要に応じて追加 */
+h1 {
+    margin: 0;
+}
+
+.nav-button {
+    background: transparent;
+    /* Transparent background */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Change cursor on hover */
+    padding: 10px;
+    /* Add some padding */
+    margin: 5px;
+    /* Space between buttons */
+    outline: none;
+    /* Remove outline */
+    z-index: 999;
+}
+
+.dli-chevron-up {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    line-height: 1;
+    width: 2em;
+    /* Double the width */
+    height: 2em;
+    /* Double the height */
+    border: 0.6em solid currentColor;
+    /* Increase the border thickness */
+    border-left: 0;
+    border-top: 0;
+    /* Change to top border for upward chevron */
+    box-sizing: border-box;
+    transform: translateY(25%) rotate(-135deg);
+    /* Up chevron */
+    z-index: 999;
+}
+
+.dli-chevron-down {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    line-height: 1;
+    width: 2em;
+    /* Double the width */
+    height: 2em;
+    /* Double the height */
+    border: 0.6em solid currentColor;
+    /* Increase the border thickness */
+    border-left: 0;
+    border-bottom: 0;
+    /* Change to bottom border for downward chevron */
+    box-sizing: border-box;
+    transform: translateY(-25%) rotate(135deg);
+    /* Down chevron */
+    z-index: 999;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack buttons vertically */
+    position: fixed;
+    /* Ensure fixed positioning */
+    bottom: 20px;
+    /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the container horizontally */
+    z-index: 999;
+    /* Ensure buttons are on top */
+}
