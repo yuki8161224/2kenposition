@@ -117,21 +117,7 @@ section {
     position: block;
 }
 
-/* 画面が768px以下のとき（タブレットやスマホ） 
-@media (max-width: 1024px) {
-    .horizontal-image-1 {
-        padding-top: 0%;
-        /* 小さい画面では余白を大きくする
-    }
-}
 
-/* 画面が1200px以上のとき（デスクトップ）
-@media (min-width: 1200px) {
-    .horizontal-image-1 {
-        padding-top: 21.9%;
-        /* 大きい画面では余白を減らす
-    }
-}*/
 
 .horizontal-image-2 {
     width: 120vw;
@@ -197,7 +183,7 @@ main img {
     }
 
     100% {
-        transform: translateX(-500px);
+        transform: translateX(-30%);
     }
 }
 
@@ -207,7 +193,7 @@ main img {
     }
 
     100% {
-        transform: translateX(500px);
+        transform: translateX(30%);
     }
 }
 
