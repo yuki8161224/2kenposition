@@ -3,7 +3,9 @@ window.addEventListener('scroll', function () {
     const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollFraction = scrollY / documentHeight; // Fraction of scroll progress
 
-    // Reference all elements
+    // Check if we're near the bottom of the page
+    const isAtBottom = (window.innerHeight + scrollY) >= document.documentElement.scrollHeight;
+
     const rows = [
         { parent: 'parentElement', underParent: 'underparentElement' },
         { parent: 'parentElementReverse', underParent: 'underparentElementReverse' },
@@ -31,12 +33,13 @@ window.addEventListener('scroll', function () {
         const underElement = document.getElementById(underParent);
         const { addClass, removeClass } = animations[index % 2];
 
+        // Add classes when in range and if not at the bottom
         if (scrollFraction >= (index * 0.0833) && scrollFraction < ((index + 1) * 0.0833)) {
             element.classList.add(addClass);
             element.classList.remove(removeClass);
             underElement.classList.add(addClass);
             underElement.classList.remove(removeClass);
-        } else {
+        } else if (!isAtBottom) { // Only remove if not at the bottom
             element.classList.remove(addClass);
             element.classList.remove(removeClass);
             underElement.classList.remove(addClass);
@@ -45,18 +48,17 @@ window.addEventListener('scroll', function () {
     });
 });
 
-
-
-
+// Fade in/out horizontal image based on scroll position
 const horizontalImage = document.getElementById('horizontal-image');
 
 window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY; // 現在のスクロール位置
-    const triggerPoint = 300; // 画像が表示され始めるスクロール位置
+    const scrollPosition = window.scrollY;
+    const triggerPoint = 300;
 
+    // Only adjust opacity if not at the bottom
     if (scrollPosition < triggerPoint) {
-        horizontalImage.style.opacity = 0; // 画像を2秒かけて表示
-    } else {
-        horizontalImage.style.opacity = 1; // 画像を非表示に戻す
+        horizontalImage.style.opacity = 0;
+    } else if (!isAtBottom) {
+        horizontalImage.style.opacity = 1;
     }
 });

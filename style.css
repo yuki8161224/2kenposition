@@ -117,7 +117,7 @@ main {
 
 
 .horizontal-image-2 {
-    width: 120vw;
+    width: 100vw;
     transition: opacity 0.5s ease;
     transition: scrollPositionX 1s ease;
     position: block;
@@ -180,7 +180,7 @@ main img {
     }
 
     100% {
-        transform: translateX(-30%);
+        transform: translateX(-70%);
     }
 }
 
@@ -190,7 +190,7 @@ main img {
     }
 
     100% {
-        transform: translateX(30%);
+        transform: translateX(70%);
     }
 }
 
@@ -227,7 +227,7 @@ main img {
 }
 
 .image-container-1 img {
-    width: 100%;
+    width: 100vw;
     /* 画像の幅を100%に */
     height: 100vh;
     /* アスペクト比を保つ */
@@ -323,4 +323,26 @@ h1 {
     /* Center the container horizontally */
     z-index: 999;
     /* Ensure buttons are on top */
+}
+
+.frosted-text-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    padding: 20px;
+    color: black;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+#textContent {
+    transition: opacity 1s ease;
+    /* Adjust the duration as needed */
+    opacity: 1;
 }
