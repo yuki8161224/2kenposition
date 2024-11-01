@@ -1,0 +1,93 @@
+.TextTyping span {
+    display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+    content: "|";
+    animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* gaisouクラス */
+.gaisou {
+    position: relative;
+    /* 相対位置に設定 */
+    display: flex;
+    flex-direction: column;
+    /* 縦に並べる */
+    justify-content: center;
+    /* 中央揃え */
+    align-items: center;
+    /* 水平中央揃え */
+    height: 300vh;
+    /* 高さを300vhに設定 */
+    width: 100vw;
+    /* 幅を画面全体に設定 */
+}
+
+/* テキストコンテナ */
+.text-content {
+    position: absolute;
+    /* 相対位置に設定 */
+    display: flex;
+    flex-direction: column;
+    /* 縦に並べる */
+    justify-content: center;
+    /* 中央揃え */
+    align-items: center;
+    width: 100vw;
+    /* 横幅を画面全体に設定 */
+    text-align: center;
+    z-index: 999;
+}
+
+/* タイトル */
+.title {
+    position: sticky;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 5%;
+    /* タイトル位置の微調整 */
+    z-index: 1000;
+}
+
+/* mojiクラス */
+.moji {
+    display: inline-block;
+    position: sticky;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 1em;
+    margin: 0 1em;
+    /* 左右に余白を追加 */
+    z-index: 1000;
+}
+
+
+
+
+
+/* ボディ */
+body {
+    margin: 0;
+    padding: 5% 0;
+    font-family: "a-otf-ryumin-pr6n";
+    height: 100vh;
+}
+
+.mass {
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
