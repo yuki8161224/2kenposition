@@ -3,25 +3,32 @@ const clipElement = document.querySelector('.clip');
 const imageContainer = document.querySelector('.image-container-2');
 
 // クリップマスクの初期設定
-const maskSize = 30; // クリップマスクのサイズ（%）
+let maskSize = 15; // クリップマスクの初期サイズ（%）
+const maxMaskSize = 80; // クリップマスクの最大サイズ（%）
 const clipX = 80; // X座標を右から20%の位置に固定
+
+// CSSでtransition効果を設定
+clipElement.style.transition = 'clip-path 0.3s ease-out';
 
 // スクロールイベントのリスナー
 window.addEventListener('scroll', () => {
-    // スクロール量を取得
+    // スクロール量を取得して、マスクサイズを増加
     const scrollY = window.scrollY;
+    const scrollX = window.scrollX;
 
     // Y座標を画面の中心に固定
     const windowHeight = window.innerHeight; // 画面の高さを取得
     const centerY = windowHeight / 2; // 画面の中心Y座標を計算
 
+    // スクロールの進行度に応じてmaskSizeを変化
+    maskSize = Math.min(maxMaskSize, 15 + (scrollY / 200)); // 最大80%まで拡大
+
     // clipPathを更新
-    clipElement.style.clipPath = `circle(${maskSize}% at ${clipX}% ${centerY + scrollY}px)`; // Y座標をスクロールに連動
+    clipElement.style.clipPath = `circle(${maskSize}% at ${clipX - (scrollX / 10)}% ${centerY + scrollY}px)`; // XとY座標をスクロールに連動
 
     // 影を追加（内側に）
     clipElement.style.boxShadow = 'inset 0 4px 8px rgba(255, 255, 255, 0.5)';
 });
-
 
 document.getElementById('startButton').addEventListener('click', function () {
     const startScreen = document.getElementById('startScreen');
@@ -32,4 +39,3 @@ document.getElementById('startButton').addEventListener('click', function () {
         startScreen.style.display = 'none';
     }, 2000); // CSSのtransitionと同じ2秒後に非表示に
 });
-
