@@ -347,28 +347,7 @@ h1 {
 }
 
 
-.frosted-text-box2 {
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    width: 250px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.8);
-    /* 半透明の白 */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* 影 */
-    backdrop-filter: blur(8px);
-    /* ぼかし効果 */
-    z-index: 999;
-}
 
-#textContent2 {
-    color: #000;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-}
 
 #textContent {
     transition: opacity 1s ease;
@@ -398,4 +377,25 @@ h1 {
     /* Optional: makes the text bold */
     box-sizing: border-box;
     /* Ensures padding/border doesn't alter the size */
+}
+
+.text-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+    /* すりガラス効果 */
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.fade {
+    transition: opacity 0.5s ease-in-out;
+    /* フェード効果のトランジション */
+    opacity: 0;
+    /* 初期状態は透明 */
 }
