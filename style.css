@@ -284,7 +284,7 @@ h1 {
     position: fixed;
     top: 3%;
     /* Position at the top */
-    left: 50%;
+    left: 90%;
     /* Center horizontally */
     z-index: 999;
 }
@@ -303,9 +303,9 @@ h1 {
     transform: translateX(-50%) rotate(135deg);
     /* Center horizontally and rotate */
     position: fixed;
-    bottom: 3%;
+    bottom: 90%;
     /* Position at the bottom */
-    left: 50%;
+    left: 90%;
     /* Center horizontally */
     z-index: 999;
 }
@@ -354,12 +354,11 @@ h1 {
 
 .homebutton {
     position: fixed;
-    left: 3%;
+    left: 5%;
     top: 3%;
     width: 12%;
     height: 5%;
     background-color: rgba(255, 255, 255, 0.345);
-
     /* Background color */
     color: black;
     /* Text color */
