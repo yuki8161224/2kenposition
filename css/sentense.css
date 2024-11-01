@@ -54,6 +54,7 @@
 /* タイトル */
 .title {
     position: sticky;
+    border: 3px solid #ffffff;
     font-size: 2em;
     font-weight: bold;
     color: #ffffff;
