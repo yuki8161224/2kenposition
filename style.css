@@ -75,21 +75,25 @@ main {
 
 .bg-yellow {
     background-color: rgba(255, 255, 0, 0.5);
+    mix-blend-mode: hard-light;
     /* Yellow */
 }
 
 .bg-indigo {
-    background-color: rgba(75, 0, 130, 0.5);
+    background-color: rgba(75, 0, 130, 0.7);
+    mix-blend-mode: color-burn;
     /* Indigo */
 }
 
 .bg-red {
     background-color: rgba(255, 0, 0, 0.5);
+    mix-blend-mode: exclusion;
     /* Red */
 }
 
 .bg-white {
     background-color: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: hard-light;
     /* White */
 }
 
