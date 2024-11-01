@@ -29,7 +29,7 @@
     /* 中央揃え */
     align-items: center;
     /* 水平中央揃え */
-    height: 300vh;
+    height: 285vh;
     /* 高さを300vhに設定 */
     width: 100vw;
     /* 幅を画面全体に設定 */
@@ -70,6 +70,7 @@
     font-size: 28px;
     font-weight: bold;
     color: #ffffff;
+    text-shadow: 0 0 15px #050505;
     padding-top: 1em;
     margin: 0 1em;
     /* 左右に余白を追加 */
@@ -85,6 +86,7 @@ body {
     margin: 0;
     padding: 5% 0;
     font-family: "a-otf-ryumin-pr6n";
+    text-shadow: 0 0 15px #050505;
     height: 100vh;
 }
 
