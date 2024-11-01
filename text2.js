@@ -1,46 +1,43 @@
-const textContent = document.getElementById("textContent");
+const textContent = document.getElementById("textContent2");
 
-// Sample texts to display at each 25% scroll
+// 表示するテキストのリスト
 const texts = [
-    "Positon A  -外装-",
-    "Positon B  -エントランス-",
-    "Positon C  -ホール-",
-    "Positon D  -アンケート-"
+    "Position A -外装-",
+    "Position B -エントランス-",
+    "Position C -ホール-",
+    "Position D -アンケート-"
 ];
 
 let currentIndex = 0;
 let isFading = false;
 
 window.addEventListener("scroll", () => {
-    if (isFading) return; // Prevent multiple fades during transition
+    if (isFading) return; // アニメーション中はスキップ
 
     const scrollPosition = window.scrollY;
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercentage = scrollPosition / totalHeight;
 
-    // Determine the new text index based on 25% intervals
+    // ページの4分の1ごとにテキストを変更
     const textIndex = Math.min(Math.floor(scrollPercentage * 4), 3);
 
     if (textIndex !== currentIndex) {
         currentIndex = textIndex;
         isFading = true;
 
-        // Fade out, update text, then fade in
+        // フェードアウト、テキスト変更、フェードイン
         textContent.style.opacity = 0;
 
-        textContent.addEventListener("transitionend", function handleFade() {
-            // Update text after fade-out
+        textContent.addEventListener("transitionend", function handleFadeOut() {
             textContent.innerText = texts[textIndex];
             textContent.style.opacity = 1;
 
-            // Once fade-in is complete, allow further changes
-            textContent.addEventListener("transitionend", function fadeInComplete() {
+            textContent.addEventListener("transitionend", function handleFadeIn() {
                 isFading = false;
-                textContent.removeEventListener("transitionend", fadeInComplete);
+                textContent.removeEventListener("transitionend", handleFadeIn);
             }, { once: true });
 
-            // Remove this listener to prevent duplicate calls
-            textContent.removeEventListener("transitionend", handleFade);
+            textContent.removeEventListener("transitionend", handleFadeOut);
         }, { once: true });
     }
 });
