@@ -17,6 +17,9 @@ window.addEventListener('scroll', () => {
 
     // clipPathを更新
     clipElement.style.clipPath = `circle(${maskSize}% at ${clipX}% ${centerY + scrollY}px)`; // Y座標をスクロールに連動
+
+    // 影を追加（内側に）
+    clipElement.style.boxShadow = 'inset 0 4px 8px rgba(255, 255, 255, 0.5)';
 });
 
 
