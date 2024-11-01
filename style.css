@@ -273,7 +273,7 @@ h1 {
 .dli-chevron-up {
     display: inline-block;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
     line-height: 1;
     width: 2em;
     height: 2em;
@@ -294,7 +294,7 @@ h1 {
 .dli-chevron-down {
     display: inline-block;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
     line-height: 1;
     width: 2em;
     height: 2em;
@@ -330,7 +330,7 @@ h1 {
     /* Ensure buttons are on top */
 }
 
-.frosted-text-box {
+/*.frosted-text-box {
     position: fixed;
     bottom: 20px;
     top: 50%;
@@ -343,10 +343,10 @@ h1 {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     /* Frosted glass effect */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
     z-index: 999;
-}
+}*/
 
 #textContent {
     transition: opacity 1s ease;
