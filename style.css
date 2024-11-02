@@ -381,24 +381,3 @@ h1 {
     box-sizing: border-box;
     /* Ensures padding/border doesn't alter the size */
 }
-
-.text-box {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: black;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.6);
-    /* すりガラス効果 */
-    border-radius: 8px;
-    z-index: 999;
-}
-
-.fade {
-    transition: opacity 0.5s ease-in-out;
-    /* フェード効果のトランジション */
-    opacity: 0;
-    /* 初期状態は透明 */
-}
