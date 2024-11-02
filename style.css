@@ -334,23 +334,6 @@ h1 {
     /* Ensure buttons are on top */
 }
 
-/*.frosted-text-box {
-    position: fixed;
-    bottom: 20px;
-    top: 50%;
-    left: 5%;
-    width: 30%;
-    padding: 20px;
-    color: black;
-    font-size: 18px;
-    font-family: "a-otf-ryumin-pr6n";
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    /* Frosted glass effect */
-/* border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-    z-index: 999;
-}*/
 
 #textContent {
     transition: opacity 1s ease;
@@ -380,4 +363,20 @@ h1 {
     /* Optional: makes the text bold */
     box-sizing: border-box;
     /* Ensures padding/border doesn't alter the size */
+}
+
+.dli-caret-left {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.375em 0.64952em;
+    border-right-color: #333;
+    /* Visible color for the arrow */
+    border-left: 0;
+    z-index: 999;
 }
