@@ -30,12 +30,13 @@ window.addEventListener('scroll', () => {
     clipElement.style.boxShadow = 'inset 0 4px 8px rgba(255, 255, 255, 0.5)';
 });
 
-document.getElementById('startButton').addEventListener('click', function () {
+document.querySelector('.dli-caret-circle-fill-right').addEventListener('click', function () {
     const startScreen = document.getElementById('startScreen');
-    startScreen.style.opacity = '0';
+    startScreen.classList.add('fadeOut');
 
     // フェードアウト後に非表示にする
     setTimeout(() => {
         startScreen.style.display = 'none';
     }, 2000); // CSSのtransitionと同じ2秒後に非表示に
 });
+

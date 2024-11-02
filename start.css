@@ -11,9 +11,51 @@
     font-size: 20px;
     font-family: Arial, sans-serif;
     opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+
+
+.dli-caret-circle-fill-right {
+    display: inline-block;
+    vertical-align: large;
+    color: #ffffff00;
+    border-color: #fff;
+    line-height: 1;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 0.2em solid #fff;
+    background: transparent;
+    border-radius: 30%;
+    z-index: 1000;
+    box-sizing: content-box;
+    transition: background-color 8s ease;
     animation: fadeIn 3s ease-in-out forwards;
 }
 
+.dli-caret-circle-fill-right::before {
+    content: '';
+    color: #fff;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1.6em 2.8em;
+    border-left-color: currentColor;
+    border-right: 0;
+    transform: translateX(15%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.fadeOut {
+    opacity: 0;
+}
 
 
 .start-screen {
@@ -34,6 +76,20 @@
     /* ゆっくりフェードアウトする */
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.start-screen.fadeOut {
+    animation: fadeOut 5s ease forwards;
+}
+
 .square-box img {
     width: 80%;
     max-width: 700px;
@@ -45,11 +101,15 @@
     border: 1% solid white;
     background-color: black;
     color: white;
+    z-index: 999;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    opacity: 0;
     animation: fadeIn 3s ease-in-out forwards;
 }
+
+
 
 
 
