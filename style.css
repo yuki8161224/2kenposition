@@ -75,21 +75,25 @@ main {
 
 .bg-yellow {
     background-color: rgba(255, 255, 0, 0.5);
+    mix-blend-mode: hard-light;
     /* Yellow */
 }
 
 .bg-indigo {
-    background-color: rgba(75, 0, 130, 0.5);
+    background-color: rgba(75, 0, 130, 0.7);
+    mix-blend-mode: color-burn;
     /* Indigo */
 }
 
 .bg-red {
     background-color: rgba(255, 0, 0, 0.5);
+    mix-blend-mode: exclusion;
     /* Red */
 }
 
 .bg-white {
     background-color: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: hard-light;
     /* White */
 }
 
@@ -273,7 +277,7 @@ h1 {
 .dli-chevron-up {
     display: inline-block;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
     line-height: 1;
     width: 2em;
     height: 2em;
@@ -294,7 +298,7 @@ h1 {
 .dli-chevron-down {
     display: inline-block;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
     line-height: 1;
     width: 2em;
     height: 2em;
@@ -330,7 +334,7 @@ h1 {
     /* Ensure buttons are on top */
 }
 
-.frosted-text-box {
+/*.frosted-text-box {
     position: fixed;
     bottom: 20px;
     top: 50%;
@@ -343,10 +347,10 @@ h1 {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     /* Frosted glass effect */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
     z-index: 999;
-}
+}*/
 
 #textContent {
     transition: opacity 1s ease;
