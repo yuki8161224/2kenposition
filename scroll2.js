@@ -5,7 +5,7 @@ window.addEventListener('scroll', function () {
 
     const overlay = document.querySelector('.overlay');
 
-    if (scrollFraction < 0.25) {
+    if (scrollFraction < 0.25, scrollFraction > 0) {
         overlay.className = 'overlay bg-yellow';
     } else if (scrollFraction >= 0.25 && scrollFraction < 0.5) {
         overlay.className = 'overlay bg-indigo';
