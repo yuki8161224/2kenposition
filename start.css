@@ -18,6 +18,8 @@
 
 .dli-caret-circle-fill-right {
     display: inline-block;
+    margin: 10%;
+    bottom: 10%;
     vertical-align: large;
     color: #ffffff00;
     border-color: #fff;
