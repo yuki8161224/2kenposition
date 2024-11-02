@@ -200,6 +200,8 @@ main img {
     height: 100%;
 }
 
+
+
 .clip {
     position: absolute;
     top: 0vh;
@@ -336,18 +338,15 @@ h1 {
     width: 30%;
     padding: 20px;
     color: black;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "a-otf-ryumin-pr6n";
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     /* Frosted glass effect */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
-
-
-
 
 #textContent {
     transition: opacity 1s ease;
