@@ -30,7 +30,7 @@
     z-index: 1000;
     opacity: 1;
     /* 初期状態の不透明度 */
-    transition: opacity 2s ease-in-out;
+    transition: opacity 5s ease-in-out;
     /* ゆっくりフェードアウトする */
 }
 
@@ -43,7 +43,6 @@
     margin-bottom: 5%;
     padding: 10px 20px;
     border: 1% solid white;
-    border-radius: 50%;
     background-color: black;
     color: white;
     font-size: 16px;
